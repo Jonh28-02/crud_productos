@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a EFE</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link href="Estilos y Script/formularioEstilo.css" rel="stylesheet">
+    <script src="js/validar.js"></script>
+</head>
+<body>
+    <main>
+
+        <div class="contenedor__todo">
+
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia Sesion</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesion</button>
+                </div>
+
+                <div class="caja__trasera-register">
+                    <h3>¿Aun no tienes una cuenta?</h3>
+                    <p>Registrate, es facil</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <div class="contenedor__login-register">
+                <form action="validar.jsp" id="formulario1" class="formulario__login">
+                    <h2>Iniciar Sesion</h2>
+                    <input type="text" id="usuario" name="usuario" onkeypress="return validarabc(event)" placeholder="NOMBRE COMPLETO" >
+                    <input type="password" id="contraseña" name="password" placeholder="Contraseña">
+                    <button id="entrar">Entrar</button>
+                </form>
+
+                <form name="formularioregistro" action="Registrar.jsp" id="formulario2" method="POST" class="formulario__register">
+                    <h2>Registrarse</h2>
+                    <input type="text" id="nombre" name="nombre" onkeypress="return validarabc(event)" placeholder="Nombre">
+                    <input type="text" id="apellidop" name="apellidop" placeholder="Apellido Paterno">  
+                    <input type="text" id="apellidom" name="apellidom" onkeypress="return validarabc(event)" placeholder="Apellido Materno">
+                    <input type="number" id="edad" name="edad" onkeypress="return validarn(event)" placeholder="Edad">
+                    <input type="text" id="direccion" name="direccion" placeholder="Direccion">
+                    <input type="number" id="telefono" onkeypress="return validarn(event)" name="telefono" placeholder="Telefono">
+                    <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <button id="registrar">Registrarse</button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+<script src="Estilos y Script/script.js"></script>
+</html>
